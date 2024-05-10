@@ -11,6 +11,7 @@ namespace ShulkerBox
         {
             Instance = this;
             Config = Helper.ReadConfig<ModConfig>();
+            Helper.Events.Content.AssetRequested += Loader.Load;
         }
     }
 
